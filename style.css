@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ff758c, #ff7eb3);
+}
+
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tile-2 { background: #eee4da; color: #776e65; }
+.tile-4 { background: #ede0c8; color: #776e65; }
+.tile-8 { background: #f2b179; }
+.tile-16 { background: #f59563; }
+.tile-32 { background: #f67c5f; }
+.tile-64 { background: #f67c5f; }
+.tile-128 { background: #f9c86e; }
+.tile-256 { background: #f9c86e; }
+.tile-512 { background: #c2d4e8; }
+.tile-1024 { background: #c2d4e8; }
+.tile-2048 { background: #edc22e; }
+
+.restart-btn {
+    background: #76c7c0;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.restart-btn:hover {
+    background: #68b0ab;
+    transform: translateY(-2px);
+}
+
+.score-container {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: repeat(4, 70px);
+    }
+
+    .tile {
+        width: 70px;
+        height: 70px;
+        font-size: 25px;
+    }
+
+    .restart-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .score-container {
+        font-size: 20px;
+    }
+}
